@@ -1,0 +1,42 @@
+\begin{example}
+Solve the cubic equation ${x}^{3}+{x}^{2}+x+ 1 =0$.
+\end{example}
+\justify
+First, we have to depress the quadratic term.
+Applying the substitution $x = y-\frac{1}{3}$, we get
+\begin{equation}
+{y}^{3}+\frac{2}{3}y+\frac{20}{27}=0
+\end{equation}
+Let us then write this as $y^3 + py+ q = 0$ where we define $$p \equiv \frac{2}{3}\quad \text{and} \qquad q \equiv \frac{20}{27}$$
+We now introduce auxiliary quantities $u$ and $v$. When we impose the first constraint $u+v=y$, our equation becomes $$u^3 + v^3 + \left(3uv+p\right)\left(u+v\right) + q = 0$$
+At this point we impose the second constraint that $3uv+p=0$, which gives us the following:
+\[
+\begin{cases}
+u^3 v^3 = -\frac{p^3}{27} = -\frac{8}{729}\\
+u^3 + v^3 = -q = -\frac{20}{27}\\
+\end{cases}
+\]
+By Vieta's formulas, $u^3$ and $v^3$ will be the roots of the quadratic $z^2 + qz - p^3/27 = 0$, or: 
+$${z}^{2}+\frac{20}{27}z-\frac{8}{729}=0$$
+Then we can use the quadratic formula to solve for $u^3$ and $v^3$, which gives: 
+\begin{align}
+u^3 &=  -\frac{10}{27} + \frac{2}{9} \sqrt{ 3 } &\implies u &=\sqrt[3]{ -\frac{10}{27} + \frac{2}{9} \sqrt{ 3 } }\\
+v^3 &=  -\frac{10}{27} - \frac{2}{9} \sqrt{ 3 } &\implies v &=\sqrt[3]{ -\frac{10}{27} - \frac{2}{9} \sqrt{ 3 } }
+\end{align}
+Since the discriminant, $\frac{q^2}{4} + \frac{p^3}{27} > 0$, we have $u, v, \in \mathbb{R}$ and $u \neq v$. Therefore, we have only one real root; the other 2 are complex conjugates.
+Thus our three solutions are, after undoing the shift $y=x-\frac{1}{3}$:
+\[
+\begin{cases} 
+x_{1} \quad=\quad  -\frac{1}{3} +\sqrt[3]{ -\frac{10}{27} + \frac{2}{9} \sqrt{ 3 } } +\sqrt[3]{ -\frac{10}{27} - \frac{2}{9} \sqrt{ 3 } } \\
+x_{2} \quad=\quad  -\frac{1}{3} +\left( -\frac{1}{2} + i \sqrt{ 3 } \frac{1}{2} \right) \sqrt[3]{ -\frac{10}{27} + \frac{2}{9} \sqrt{ 3 } } + {\left( -\frac{1}{2} + i \sqrt{ 3 } \frac{1}{2} \right)}^{2} \sqrt[3]{ -\frac{10}{27} - \frac{2}{9} \sqrt{ 3 } } \\
+x_{3} \quad=\quad  -\frac{1}{3} + {\left( -\frac{1}{2} + i \sqrt{ 3 } \frac{1}{2} \right)}^{2} \sqrt[3]{ -\frac{10}{27} + \frac{2}{9} \sqrt{ 3 } } +\left( -\frac{1}{2} + i \sqrt{ 3 } \frac{1}{2} \right) \sqrt[3]{ -\frac{10}{27} - \frac{2}{9} \sqrt{ 3 } } \\
+\end{cases} 
+\]
+This simplifies to:
+\[
+\begin{cases} 
+x_{1} \quad=\quad  -1 \\
+x_{2} \quad=\quad i\\
+x_{3} \quad=\quad \left( -1 \right) i \\
+\end{cases} 
+\]

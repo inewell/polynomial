@@ -1,0 +1,48 @@
+\begin{example}
+Solve the quartic equation $ 5 {x}^{4}+ 2 {x}^{3}+ 7 {x}^{2}+ 4 x+ 1 =0$.
+\end{example}
+\justify
+First, we have to depress the cubic term.
+Applying the substitution $x = y-\frac{1}{2}$, we get
+\begin{equation*}
+ 5 {y}^{4} -8 {y}^{3}+\frac{23}{2}{y}^{2} -4 y+\frac{13}{16}=0
+\end{equation*}
+Let us then write this as $y^4 + py^2 + qy+ r = 0$ where we define 
+$$p \equiv \frac{23}{2}\quad \text{and} \qquad q \equiv  -4 \quad \text{and} \qquad r \equiv \frac{13}{16}$$
+Inserting an auxiliary variable $\alpha$, we rearrange our depressed quartic as follows:
+\begin{equation*}
+\left(y^2 + \frac{p}{2} + \alpha \right)^2 = 2\alpha y^2 - qy + \alpha^2 + p \alpha + \frac{p^2}{4} - r
+\end{equation*}
+The RHS of the above is quadratic in $y$. We next set $\alpha$ such that RHS is a perfect square, by setting the discriminant of that quadratic to zero. Thus we are left with the following cubic in $\alpha$:
+$$\alpha^3 + p\alpha^2 + \left(\frac{p^2}{4} - r\right)\alpha - \frac{q^2}{8} = 0$$
+$$\therefore {\alpha}^{3}+\frac{23}{2}{\alpha}^{2}+\frac{129}{4}\alpha -2 =0$$
+We can now solve for $\alpha$ using Cardano's method. We will need $\alpha \neq 0$. We get:
+$$\alpha =  -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } $$
+Now that both sides of our equation for $y$ are perfect squares, we move the RHS over to the left and factor as follows:
+\begin{equation}
+\left(y^2 - \sqrt{2\alpha} y + \frac{p}{2} + \alpha + \frac{q}{2\sqrt{2\alpha}}\right)\left(y^2 + \sqrt{2\alpha} y + \frac{p}{2} + \alpha - \frac{q}{2\sqrt{2\alpha}}\right) = 0
+\end{equation}
+Since we have two quadratic factors, we now solve both with the quadratic formula. 
+Thus our four solutions are, after undoing the shift $y=x-\frac{1}{2}$:
+\tiny
+\begin{multline*}
+x_{1} \quad=\quad  -\frac{1}{2} + \frac{1}{2} \sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)} \\+ \frac{1}{2} \sqrt{\left( -1 \right)\left( 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right) + 23 - 8 \frac{1}{\sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)}} \right)} 
+\end{multline*}
+\begin{multline*}
+x_{2} \quad=\quad  -\frac{1}{2} + \frac{1}{2} \sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)} \\- \frac{1}{2} \sqrt{\left( -1 \right)\left( 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right) + 23 - 8 \frac{1}{\sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)}} \right)} 
+\end{multline*}
+\begin{multline*}
+x_{3} \quad=\quad  -\frac{1}{2} - \frac{1}{2} \sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)} \\+ \frac{1}{2} \sqrt{\left( -1 \right)\left( 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right) + 23 + 8 \frac{1}{\sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)}} \right)} 
+\end{multline*}
+\begin{multline*}
+x_{4} \quad=\quad  -\frac{1}{2} - \frac{1}{2} \sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)} \\- \frac{1}{2} \sqrt{\left( -1 \right)\left( 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right) + 23 + 8 \frac{1}{\sqrt{ 2 \left( -\frac{23}{6} +\sqrt[3]{ \frac{2801}{432} + \sqrt{ 54449881 } \frac{1}{11664} } +\sqrt[3]{ \frac{2801}{432} - \frac{1}{11664} \sqrt{ 54449881 } } \right)}} \right)} 
+\end{multline*}
+These horrendous expressions evaluate numerically to: 
+\[
+\begin{cases} 
+x_{1} \quad=\quad 2.0334-0.6175 i\\
+x_{2} \quad=\quad -3.0334 + 1.082 i\\
+x_{3} \quad=\quad 2.0334 + 0.6175 i\\
+x_{4} \quad=\quad -3.0334-1.082 i\\
+\end{cases} 
+\]
