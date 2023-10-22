@@ -186,6 +186,14 @@ public class Fraction
     return new Fraction(d,n);
   }
 
+  //What if n==0?
+  public Fraction reciprocal_n() {
+    if (n == 0) {
+      throw new IllegalArgumentException("Divide by zero");
+    }
+    return new Fraction(d,n);
+  }
+
   // Returns the value of this fraction as a double
   public double getValue()
   {
